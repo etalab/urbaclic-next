@@ -6,7 +6,11 @@ import Details from '../components/Details'
 class Index extends Component {
   constructor(props) {
     super(props)
-    this.state = { lat: 43.8, long: 0.1, zoom: 3 }
+    this.state = this.props
+  }
+
+  static async getInitialProps () {
+    return { lat: 43.8, long: 0.1, zoom: 3 }
   }
 
   showDetail(suggestion) {
