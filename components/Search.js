@@ -82,7 +82,7 @@ const theme = {
 
   suggestionsList: {
     position: 'fixed',
-    top: '80px',
+    top: '70px',
     margin: 0,
     padding: 0,
     listStyleType: 'none',
