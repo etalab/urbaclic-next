@@ -22,9 +22,8 @@ class AutocompleteInput extends Component {
       .then(({ result, err }) => this.setState({ result, err }))
   }
 
-  onSuggestionSelected() {
-    // const { showDetails } = this.props
-    // showDetails(suggestion)
+  onSuggestionSelected(suggestion) {
+    this.props.showDetail(suggestion)
     this.clearSuggestions()
   }
 
@@ -59,32 +58,31 @@ class AutocompleteInput extends Component {
 }
 
 AutocompleteInput.propTypes = {
-  onSuggestionSelected: React.PropTypes.func,
+  showDetail: React.PropTypes.func,
 }
-
-export default AutocompleteInput
 
 const theme = {
   container: {
     width: '70%',
     position: 'fixed',
-    top: '10'
+    top: '10px',
+    zIndex: 10,
   },
 
   input: {
     width: '100%',
-    height: 30,
+    height: '30px',
     padding: '10px 20px',
     fontFamily: 'Helvetica, sans-serif',
     fontWeight: 300,
-    fontSize: '16',
+    fontSize: '16px',
     border: '1px solid #aaa',
     borderRadius: 4,
   },
 
   suggestionsList: {
     position: 'fixed',
-    top: 80,
+    top: '80px',
     margin: 0,
     padding: 0,
     listStyleType: 'none',
@@ -102,3 +100,5 @@ const theme = {
     textDecoration: 'underline',
   },
 }
+
+export default AutocompleteInput
