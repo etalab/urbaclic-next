@@ -1,0 +1,21 @@
+{
+  "name": "urbaclic-next",
+  "version": "1.0.0",
+  "description": "Accéder aux règles d'urbanisme en quelques clics",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/sgmap/urbaclic-next",
+    "type": "git"
+  },
+  "author": "SGMAP",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "next": "^1.2.3",
+    "react-autosuggest": "^7.0.1"
+  },
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
+  }
+}
